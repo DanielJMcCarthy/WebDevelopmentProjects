@@ -1,0 +1,124 @@
+<!-- Daniel J McCarthy
+        C1 Module Assignment 2 DCU -->
+
+/* Again, couldn't get this working but some of the code looks right */
+
+
+<!DOCTYPE html>
+<html>
+
+    
+
+    
+<head>
+    
+    <!-- ====================================================== -->
+    <!-- Display Title -->
+    <!-- ====================================================== -->
+    
+  <title>Input Validation</title>
+    
+    
+        
+    
+</head>
+    
+        <!-- ====================================================== -->
+        <!-- Style -->
+        <!-- ====================================================== -->
+
+    <style>
+        #footer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 2.5rem;            /* Footer height */
+        }
+    
+    </style>
+
+    
+    <body>
+        
+        <h3>Input a valid date [dd/mm/yyyy]</h3> 
+           
+            <ul>
+            <li><input type='text' name='text1'/></li>
+            <li class="Calculate Age"><input type="submit" name="Calculate Age" value="Submit" onclick="validateDate()"/></li>
+            </ul>
+        
+            
+     </body>
+        <!-- ====================================================== -->
+        <!-- JavaScript for input validation -->
+        <!-- ====================================================== -->
+   
+            <script>
+   function validateDate(){
+       try{
+           /* check if the date format uses relevant chars */
+           var dateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-]$/;
+           // Match the date format with the input
+            if(inputText.value.match(dateformat))
+            }catch(err)
+          {
+
+         msg="Invalid date" + err.message + "\n\n";
+         msg+="Click OK to continue.\n\n";
+         alert(msg);
+
+          }
+           
+           
+      
+           /* parse the date entered and extract the day,month,year */
+        var pdate = inputText.value.split('/');
+
+        var dd = parseInt(pdate[0]);
+        var mm  = parseInt(pdate[1]);
+        var yy = parseInt(pdate[2]);
+
+           
+           
+           //Validation code for a Leap Year
+      
+              if ( (!(yy % 4) && yy % 100) || !(yy % 400)) 
+              {
+              leapYear = true;
+                  
+              if ((leapYear == false) && (dd>=29))
+              {
+              alert("Invalid date");
+              return false;
+
+                   }
+                  
+              }
+       }
+          
+    </script> 
+    
+       
+
+   
+ 
+ 
+    
+    
+    
+    <footer id="footer">
+        
+        
+        <p>
+            <br>Assignment 2 Question 4
+            <br>Author: Daniel J McCarthy
+            
+        </p>
+        
+        
+    </footer>
+        
+
+    
+</html>
+

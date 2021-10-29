@@ -1,0 +1,112 @@
+<!-- Daniel J McCarthy
+        C1 Module Assignment 2 DCU -->
+
+
+<!-- I couldn't figure out all parts to this question but I think I got part of the logic to it. -->
+
+<!DOCTYPE html>
+<html>
+
+    
+
+    
+<head>
+    
+    <!-- ====================================================== -->
+    <!-- Display Title -->
+    <!-- ====================================================== -->
+    
+  <title>Half Diamond</title>
+    
+    
+        
+    
+</head>
+    
+        <!-- ====================================================== -->
+        <!-- Style for button -->
+        <!-- ====================================================== -->
+
+    <style>
+
+
+        .button {
+            color: black;
+            text-align: center;
+            font-size: 12px;
+            background-color: #f5f3ed;
+    }
+    
+    </style>
+
+    
+    <body>
+        
+        
+        
+        <!-- ====================================================== -->
+        <!-- Create Button -->
+        <!-- ====================================================== -->
+        
+        <button class="button" onclick="generatePattern()">Generate Pattern</button>
+         
+        
+        <p id="pattern"></p>
+        
+        
+    
+    
+    
+        <!-- ====================================================== -->
+        <!-- JavaScript for the diamond functionality -->
+        <!-- ====================================================== -->
+    <script>
+          
+        
+        function generatePattern{
+        var i = 0;
+        var pattern=new String("X");
+            
+            /* Top half of pattern */
+        for(i=0; i < 8; i++;){
+            
+            if(i%2 = 0){
+                pattern = pattern += "X" + <br>;
+            }
+            
+            else{
+            pattern = pattern += "O" + <br>;
+            
+            }
+        }
+            
+            
+        }
+            
+    document.getElementById("pattern").innerHTML = pattern;
+        
+}
+    </script> 
+    
+       
+
+    </body>
+ 
+    
+    
+    
+    <footer>
+        
+        <p>
+            <br>Assignment 2 Question 3
+            <br>Author: Daniel J McCarthy
+            
+        </p>
+        
+        
+    </footer>
+        
+
+    
+</html>
+

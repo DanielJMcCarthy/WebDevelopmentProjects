@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+        
+    <!-- ====================================================== -->
+    <!-- HTML for various components of webpage -->
+    <!-- ====================================================== -->
+<h2>Variables</h2>
+
+<p id="a"></p>
+<p id="b"></p>
+<p id="c"></p>
+<p id="d"></p>
+<p id="e"></p>
+    
+    
+    <!-- ====================================================== -->
+    <!-- JavaScript for various components of webpage -->
+    <!-- ====================================================== -->
+<script>
+    
+        /* a */
+    var x = 3;
+    var y = 6;
+    var answer = x + y;
+    document.getElementById("a").innerHTML =
+    "The sum of x and y is: " + answer;
+
+        /* b */
+    var str1 = "Orient ";
+    var str2 = "Express";
+    var concatResult = str1.concat(str2);
+    document.getElementById("b").innerHTML =
+        concatResult;
+
+        /* c */
+    var instruments = ["violin", "viola", "cello", "bass"];
+    var arrayResult = instruments[3];
+    document.getElementById("c").innerHTML =
+    arrayResult;
+    
+    
+        /* d */
+    /* object */
+    var employee = {
+        id: "1234",
+        firstName: "Daniel",
+        lastName: "McCarthy",
+    };
+    
+    var info = " ";
+    var propertyPosition;
+    /* loop through each element of the object and display */
+    for (propertyPosition in employee) {
+    info += employee[propertyPosition] + " ";
+        
+    document.getElementById("d").innerHTML =
+    info;
+    }
+    
+    
+    /* e */
+    var sum = 0;
+    var e;
+    for (e = 0; e > -5; e--) {
+        
+    sum = sum + e;
+        
+    document.getElementById("e").innerHTML =
+    sum;
+    }
+    
+    
+   
+</script>
+    
+    
+    
+
+</body>
+<footer>
+        
+    <p>
+        <br>Assignment 2 Question 2
+        <br>Author: Daniel J McCarthy
+        
+     </p>
+        
+        
+</footer>
+    
+    
+</html>
+
+
+
+
+
+
+
